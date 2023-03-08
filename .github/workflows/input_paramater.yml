@@ -16,17 +16,8 @@ jobs:
   build-version:
     runs-on: ubuntu-latest
 
-    steps:
-    - name: Git checkout
-      uses: actions/checkout@v2
-      with:
-        fetch-depth: '0'
-    - name: Group of log lines
-      run: |
-        echo "::group::My title"
-        echo 'text here' >> text1.txt
-        pwd
-        
+    steps:        
     - name: Cloud
       run: |
-        echo "the selected cloud provider is:=" ${{ github.event.inputs.cloud_provider }} 
+        echo "The selected cloud provider is: " ${{ github.event.inputs.cloud_provider }}
+        echo "Publish Artifacts? is:=" ${{ github.event.inputs.publish_artifacts }} 
