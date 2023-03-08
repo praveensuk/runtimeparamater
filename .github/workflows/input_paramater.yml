@@ -29,4 +29,4 @@ jobs:
         
     - name: Cloud
       run: |
-        echo "the selected cloud provider is:=" ${{ github.event.inputs.flutter_version }} 
+        echo "the selected cloud provider is:=" ${{ github.event.inputs.cloud_provider }} 
