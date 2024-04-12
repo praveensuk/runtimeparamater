@@ -15,4 +15,10 @@ jobs:
   runs-on: ubuntu-latest
   
   steps:
-   - 
+    - name: create-json
+      id: create-json
+      uses: jsdaniell/create-json@v1.2.3
+      with:
+        name: "credentials.json"
+        json: ${{ secrets.CREDENTIALS_JSON }}
+        dir: 'src/'
